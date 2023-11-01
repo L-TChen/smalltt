@@ -4,9 +4,6 @@ resolver: lts-21.17
 packages:
 - .
 
-ghc-options:
-  "$everything": -split-sections
-
 extra-deps:
 - flatparse-0.5.0.1
 - git: https://github.com/AndrasKovacs/dynamic-array.git

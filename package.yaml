@@ -91,6 +91,9 @@ when:
   - condition: flag(debug)
     cpp-options:
       - -DDEBUG
+  - condition: "!os(darwin)"
+    ghc-options:
+      - -split-sections 
 
 library:
   source-dirs:

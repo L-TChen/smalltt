@@ -108,6 +108,8 @@ library
     ghc-options: -fllvm
   if flag(debug)
     cpp-options: -DDEBUG
+  if !os(darwin)
+    ghc-options: -split-sections
 
 executable smalltt
   main-is: Main.hs
@@ -165,3 +167,5 @@ executable smalltt
     ghc-options: -fllvm
   if flag(debug)
     cpp-options: -DDEBUG
+  if !os(darwin)
+    ghc-options: -split-sections
